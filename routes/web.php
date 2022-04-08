@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FecultyController;
+use App\Http\Controllers\MultiImageController;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 
@@ -42,6 +43,8 @@ Route::get('/feculty/all', [FecultyController::class, 'AllFeculty'])->name('all.
 
 Route::post('/feculty/add', [FecultyController::class, 'StoreFeculty'])->name('store.feculty');
 
+// For Multi Image routes
+Route::get('/multi/image', [MultiImageController::class, 'multi'])->name('image.all');
 
 
 

@@ -23,6 +23,9 @@
                     <x-jet-nav-link href="{{ route('all.feculty') }}" style="text-decoration: none">
                         Faculty Profiles
                     </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('image.all') }}" style="text-decoration: none">
+                        Multiple Image
+                    </x-jet-nav-link>
                 </div>
             </div>
 
