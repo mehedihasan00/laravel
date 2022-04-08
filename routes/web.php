@@ -20,7 +20,8 @@ use Illuminate\Support\Facades\DB;
 
 Route::get('/', function () {
     $feculties = DB::table('feculties')->get();
-    return view('home', compact('feculties'));
+    $categories = DB::table('categories')->get();
+    return view('home', compact('feculties', 'categories'));
 });
 
 // Category Controller
