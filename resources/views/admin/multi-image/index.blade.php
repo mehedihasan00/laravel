@@ -35,11 +35,10 @@
                   <tbody>
                     <!-- @php($i=1) -->
                     <tr>
-                      <th scope="row"></th>
-                      <td></td>
+                      <td scope="row">1</td>
                       <td><img src="" style="height: 40px; width: 60px"></td>
                       <td>
-                        
+                        22
                       </td>
                       <td>
                         <a href="" class="btn btn-info">Edit</a>
@@ -55,24 +54,17 @@
             <div class="card">
               <div class="card-header">Add Images</div>
               <div class="card-body">
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('store.mulImage') }}" method="POST" enctype="multipart/form-data">
                   @csrf
                   <div class="mb-3">
-                    <label for="multiImageName" class="form-label">Images Name</label>
-                    <input type="text" name="multiImageName" class="form-control" id="multiImageName" aria-describedby="multiImageName">
-                    @error('multiImageName')
-                      <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                  </div>
-                  <div class="mb-3">
                     <label for="multiImage" class="form-label">multiImage</label>
-                    <input type="file" name="multiImage" class="form-control" id="multiImage" aria-describedby="multiImage">
+                    <input type="file" name="multiImage[]" class="form-control" id="multiImage" aria-describedby="multiImage" multiple>
                     @error('multiImage')
                       <span class="text-danger">{{ $message }}</span>
                     @enderror
                   </div>
                   
-                  <button type="submit" class="btn btn-primary">Add Faculty</button>
+                  <button type="submit" class="btn btn-primary">Add Images</button>
                 </form>
               </div>
             </div>

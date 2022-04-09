@@ -46,6 +46,7 @@ Route::post('/feculty/add', [FecultyController::class, 'StoreFeculty'])->name('s
 
 // For Multi Image routes
 Route::get('/multi/image', [MultiImageController::class, 'multi'])->name('image.all');
+Route::post('/multi/image/insert', [MultiImageController::class, 'multiInsert'])->name('store.mulImage');
 
 
 
